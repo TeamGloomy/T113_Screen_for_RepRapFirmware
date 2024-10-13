@@ -130,7 +130,7 @@ Flythings has some documentation on the SDK, it is split between a more up-to-da
 > It is advised to use a virtual machine for development.
 
 * Install Flythings IDE
-  * [Environmental Installation · FlyThings Docs](https://developer.flythings.cn/zh-hans/download.html)
+  * [Environmental Installation · FlyThings Docs](https://developer.flythings.cn/zh-hans/download.html). For the time being make sure you install the older version of the IDE.
 * Install Make
   * Download [make](http://gnuwin32.sourceforge.net/packages/make.htm). Use the “complete package except sources” version. Once installed you will need to add the location of the bin folder that is installed in to your windows path environment setting. Make sure you add them to the system variables and not the user varaibles.
 * Download the `T113` SDK folder

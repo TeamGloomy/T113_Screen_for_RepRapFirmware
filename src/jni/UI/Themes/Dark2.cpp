@@ -7,28 +7,28 @@ namespace UI::Theme
 	enum Colors : uint32_t
 	{
 		Clear = 0x00FFFFFF,
-		Black = 0xFF000000,
-		White = 0xFFFFFFFF,
-		LighterGray = 0xFFE0E0E0,
-		LightGray = 0xFFC0C0C0,
-		Gray = 0xFFA0A0A0,
-		DarkGray = 0xFF808080,
-		DarkerGray = 0xFF606060,
-		Red = 0xFFFF0000,
-		DarkRed = 0xFFFF8080,
-		Blue = 0xFF0000FF,
-		Blue2 = 0xFF5578FC,
-		Blue3 = 0xFF00AAF4,
-		Blue4 = 0xFF00CCFF,
-		Yellow = 0xFFECBC35,
-		DarkYellow = 0xFFD4A82A,
-		Green = 0xFF00FF00,
-		VDarkBlue = 0xFF0B0D2B,
+		Black = 0xFF000000, //000000
+		White = 0xFFFFFFFF, //ffffff
+		LighterGray = 0xFFE0E0E0, //e0e0e0
+		LightGray = 0xFFC0C0C0, //c0c0c0
+		Gray = 0xFFA0A0A0, //a0a0a0
+		DarkGray = 0xFF808080, //808080
+		DarkerGray = 0xFF606060, //606060
+		Red = 0xFFFF0000, //ff0000
+		DarkRed = 0xFFFF8080, //ff8080
+		Blue = 0xFF0000FF, //0000ff
+		Blue2 = 0xFF5578FC, //5578fc
+		Blue3 = 0xFF00AAF4, //00aaf4
+		Blue4 = 0xFF00CCFF, //00ccff
+		Yellow = 0xFFECBC35, //ecbc35
+		DarkYellow = 0xFFD4A82A, //d4a82a
+		Green = 0xFF00FF00, //00ff00
+		VDarkBlue = 0xFF0B0D2B, //0b0d2b
 		// VVDarkBlue = 0xFFFF0000,
-		VVDarkBlue = 0xFF0b0d17,
-		VVDarkBlueTrans = 0x8F0b0d17,
-		DarkBlue = 0xFF0b0d56,
-		BurntOrange = 0xFFCC5500,
+		VVDarkBlue = 0xFF0b0d17, //0b0d17
+		VVDarkBlueTrans = 0x8F0b0d17, //0b0d17
+		DarkBlue = 0xFF0b0d56, //0b0d56
+		BurntOrange = 0xFFCC5500, //cc5500
 	};
 
 	static ThemeColors s_dark2Theme = {
@@ -63,7 +63,7 @@ namespace UI::Theme
 		.button =
 			{
 				.bgDefault = NULL,
-				.bgImage = "Dark2/Background_Rounded_Inverted_Black.png",
+				.bgImage = "Dark2/Background_Rounded_Inverted_VVDarkBlue.png",
 				.background =
 					{
 						.normal = Colors::VDarkBlue,
@@ -191,7 +191,7 @@ namespace UI::Theme
 		.listItem =
 			{
 				.bgDefault = Colors::Gray,
-				.bgImage = "Dark2/Background_Rounded_Inverted_Black.png",
+				.bgImage = "Dark2/Background_Rounded_Inverted_VVDarkBlue.png",
 				.background =
 					{
 						.normal = Colors::VDarkBlue,
@@ -431,7 +431,7 @@ namespace UI::Theme
 				->setButtonStatusPic(ZK_CONTROL_STATUS_NORMAL, "Dark2/engine-off.png");
 
 			// Extruder Window
-			// UI::GetUIControl<ZKButton>(ID_MAIN_UnloadFilamentBtn)->setBackgroundPic("Dark2/Background_Rounded_Elongated_VDarkBlue.png");
+			UI::GetUIControl<ZKButton>(ID_MAIN_UnloadFilamentBtn)->setBackgroundPic("Dark2/Background_Rounded_Elongated_Inverted_VDarkBlue.png");
 
 			// Console
 			constexpr float consoleButtonScale = 0.45;
@@ -516,7 +516,7 @@ namespace UI::Theme
 				pListItem->setBgStatusColor(ZK_CONTROL_STATUS_SELECTED, Colors::Yellow);
 				pListItem->setBgStatusColor(ZK_CONTROL_STATUS_PRESSED | ZK_CONTROL_STATUS_SELECTED, Colors::DarkYellow);
 				pListItem->setButtonStatusPic(ZK_CONTROL_STATUS_SELECTED, nullptr);
-				// pListItem->setBackgroundPic("Dark2/Background_Rounded_Elongated_VDarkBlue.png");	// TODO - invert bg
+				pListItem->setBackgroundPic("Dark2/Background_Rounded_Elongated_Inverted_VDarkBlue.png");	// TODO - invert bg
 				break;
 			}
 			case ID_MAIN_AxisControlListView:
@@ -550,7 +550,7 @@ namespace UI::Theme
 			}
 			case ID_MAIN_DebugCommandList:
 			{
-				// pListItem->setBackgroundPic("Dark2/Background_Rounded_Elongated_VDarkBlue.png");	// TODO invert
+				pListItem->setBackgroundPic("Dark2/Background_Rounded_Elongated_Inverted_VDarkBlue.png");	// TODO invert
 				break;
 			}
 			case ID_MAIN_WindowSelectList:
